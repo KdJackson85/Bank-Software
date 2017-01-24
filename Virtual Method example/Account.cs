@@ -76,6 +76,7 @@ namespace Virtual_Method_example
                     deposit = double.Parse(Console.ReadLine());
                     balance += deposit;
                     Console.WriteLine("your current balance is: " + balance);
+                    
                     Console.WriteLine();
                     continue;
                 }
@@ -84,10 +85,17 @@ namespace Virtual_Method_example
                     Console.WriteLine("How much would you like to withdraw?");
                     withdrawal = double.Parse(Console.ReadLine());
                     balance -= withdrawal;
-                    Console.WriteLine("Your current balance is: " + balance);
-                    Console.WriteLine();
-                    continue;
-                    
+                    if (balance <= 0)
+                    {
+                        Console.WriteLine("Insufficient funds. Unable to withdraw.");
+                        continue;
+                    }
+                    else 
+                    {
+                        Console.WriteLine("Your current balance is: " + balance);
+                        Console.WriteLine();
+                        continue;
+                    }
                 }
                 else
                 {
