@@ -10,6 +10,9 @@ namespace Virtual_Method_example
     {
         static void Main(string[] args)
         {
+            Account myAccount = new Account();
+            myAccount.getBalance();
+            Console.ReadKey();
         }
     }
 }
